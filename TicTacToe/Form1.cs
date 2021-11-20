@@ -20,6 +20,13 @@ namespace TicTacToe
             InitializeComponent();
         }
 
+        public void clearBoard()
+        {
+            Form1 newForm = new Form1();
+            newForm.Show();
+            this.Dispose(false);
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -148,41 +155,33 @@ namespace TicTacToe
                 }
             }
 
-            turnCounts += 1;
-            if (turnCounts == 9)
-            {
-                MessageBox.Show("Draw");
-                Form1 newForm = new Form1();
-                newForm.Show();
-                this.Dispose(false);
-            }
-
             if (isWinner)
             {
                 if (turn)
                 {
                     MessageBox.Show("O wins!");
-                    Form1 newForm = new Form1();
-                    newForm.Show();
-                    this.Dispose(false);
+                    clearBoard();
                 }
                 else
                 {
                     MessageBox.Show("X wins!");
-                    Form1 newForm = new Form1();
-                    newForm.Show();
-                    this.Dispose(false);
+                    clearBoard();
                 }
             
+            }
+            
+            turnCounts += 1;
+            if (turnCounts == 9)
+            {
+                MessageBox.Show("Draw");
+                clearBoard();
             }
         }
 
         
         private void btnReset_Click(object sender, EventArgs e)
         {
-            Form1 newForm = new Form1();
-            newForm.Show();
-            this.Dispose(false);
+            clearBoard();
         }
     }
 }
