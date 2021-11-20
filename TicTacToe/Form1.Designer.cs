@@ -57,6 +57,7 @@ namespace TicTacToe
             this.btnTopMid.Size = new System.Drawing.Size(83, 78);
             this.btnTopMid.TabIndex = 1;
             this.btnTopMid.UseVisualStyleBackColor = true;
+            this.btnTopMid.Click += new System.EventHandler(this.btnClick);
             // 
             // btnTopRight
             // 
@@ -65,6 +66,7 @@ namespace TicTacToe
             this.btnTopRight.Size = new System.Drawing.Size(83, 78);
             this.btnTopRight.TabIndex = 3;
             this.btnTopRight.UseVisualStyleBackColor = true;
+            this.btnTopRight.Click += new System.EventHandler(this.btnClick);
             // 
             // btnReset
             // 
@@ -82,6 +84,7 @@ namespace TicTacToe
             this.btnMidRight.Size = new System.Drawing.Size(83, 78);
             this.btnMidRight.TabIndex = 6;
             this.btnMidRight.UseVisualStyleBackColor = true;
+            this.btnMidRight.Click += new System.EventHandler(this.btnClick);
             // 
             // btnMidMid
             // 
@@ -90,6 +93,7 @@ namespace TicTacToe
             this.btnMidMid.Size = new System.Drawing.Size(83, 78);
             this.btnMidMid.TabIndex = 5;
             this.btnMidMid.UseVisualStyleBackColor = true;
+            this.btnMidMid.Click += new System.EventHandler(this.btnClick);
             // 
             // btnMidLeft
             // 
@@ -98,6 +102,7 @@ namespace TicTacToe
             this.btnMidLeft.Size = new System.Drawing.Size(83, 78);
             this.btnMidLeft.TabIndex = 4;
             this.btnMidLeft.UseVisualStyleBackColor = true;
+            this.btnMidLeft.Click += new System.EventHandler(this.btnClick);
             // 
             // btnBotRight
             // 
@@ -106,6 +111,7 @@ namespace TicTacToe
             this.btnBotRight.Size = new System.Drawing.Size(83, 78);
             this.btnBotRight.TabIndex = 9;
             this.btnBotRight.UseVisualStyleBackColor = true;
+            this.btnBotRight.Click += new System.EventHandler(this.btnClick);
             // 
             // btnBotMid
             // 
@@ -114,6 +120,7 @@ namespace TicTacToe
             this.btnBotMid.Size = new System.Drawing.Size(83, 78);
             this.btnBotMid.TabIndex = 8;
             this.btnBotMid.UseVisualStyleBackColor = true;
+            this.btnBotMid.Click += new System.EventHandler(this.btnClick);
             // 
             // btnBotLeft
             // 
@@ -122,6 +129,7 @@ namespace TicTacToe
             this.btnBotLeft.Size = new System.Drawing.Size(83, 78);
             this.btnBotLeft.TabIndex = 7;
             this.btnBotLeft.UseVisualStyleBackColor = true;
+            this.btnBotLeft.Click += new System.EventHandler(this.btnClick);
             // 
             // Form1
             // 
