@@ -63,20 +63,38 @@ namespace TicTacToe
                     isWinner = true;
                 }
             }
-
-            //if ((btntopleft.text == btntopmid.text) && (btntopmid.text == btntopright.text) && (!btntopleft.enabled))
-            //{
-            //    iswinner = true;
-            //}
-            //else if ((btnmidleft.text == btnmidmid.text) && (btnmidmid.text == btnmidright.text) && (!btnmidleft.enabled))
-            //{
-            //    iswinner = true;
-            //}
-            //else if ((btnbotleft.text == btnbotmid.text) && (btnbotmid.text == btnbotright.text) && (!btnbotleft.enabled))
-            //{
-            //    iswinner = true;
-            //}
-
+            if (btnTopMid.Text == "X")
+            {
+                if (btnMidMid.Text == "X" && btnBotMid.Text == "X")
+                {
+                    isWinner = true;
+                }
+            }
+            if (btnTopRight.Text == "X")
+            {
+                if (btnMidMid.Text == "X" && btnBotLeft.Text == "X")
+                {
+                    isWinner = true;
+                }
+                else if (btnMidRight.Text == "X" && btnBotRight.Text == "X")
+                {
+                    isWinner = true;
+                }
+            }
+            if (btnMidLeft.Text == "X")
+            {
+                if (btnMidMid.Text == "X" && btnMidRight.Text == "X")
+                {
+                    isWinner = true;
+                }
+            }
+            if (btnBotLeft.Text == "X")
+            {
+                if (btnBotMid.Text == "X" && btnBotRight.Text == "X")
+                {
+                    isWinner = true;
+                }
+            }
 
             if (isWinner)
             {
