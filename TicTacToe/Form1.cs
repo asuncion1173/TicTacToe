@@ -155,27 +155,34 @@ namespace TicTacToe
                 }
             }
 
-            if (isWinner)
-            {
-                if (turn)
-                {
-                    MessageBox.Show("O wins!");
-                    clearBoard();
-                }
-                else
-                {
-                    MessageBox.Show("X wins!");
-                    clearBoard();
-                }
-            
-            }
-            
             turnCounts += 1;
-            if (turnCounts == 9)
+
+            try
             {
-                MessageBox.Show("Draw");
-                clearBoard();
+                if (isWinner)
+                {
+                    if (turn)
+                    {
+                        MessageBox.Show("O wins!");
+                        clearBoard();
+                    }
+                    else
+                    {
+                        MessageBox.Show("X wins!");
+                        clearBoard();
+                    }
+
+                }
             }
+            catch
+            {
+                if (turnCounts == 9)
+                {
+                    MessageBox.Show("Draw");
+                    clearBoard();
+                }
+            }
+  
         }
 
         
