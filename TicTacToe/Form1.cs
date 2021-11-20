@@ -63,8 +63,8 @@ namespace TicTacToe
                 {
                     isWinner = true;
                 }
-
             }
+
             if (btnTopMid.Text == "X")
             {
                 if (btnMidMid.Text == "X" && btnBotMid.Text == "X")
@@ -159,10 +159,16 @@ namespace TicTacToe
                 if (turn)
                 {
                     MessageBox.Show("O wins!");
+                    Form1 newForm = new Form1();
+                    newForm.Show();
+                    this.Dispose(false);
                 }
                 else
                 {
                     MessageBox.Show("X wins!");
+                    Form1 newForm = new Form1();
+                    newForm.Show();
+                    this.Dispose(false);
                 }
             
             }
