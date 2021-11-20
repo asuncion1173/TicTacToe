@@ -7,4 +7,4 @@ C:\Users\ASUNCION\source\repos\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.Ge
 C:\Users\ASUNCION\source\repos\TicTacToe\TicTacToe\obj\Debug\TicTacToe.csproj.CoreCompileInputs.cache
 C:\Users\ASUNCION\source\repos\TicTacToe\TicTacToe\obj\Debug\TicTacToe.exe
 C:\Users\ASUNCION\source\repos\TicTacToe\TicTacToe\obj\Debug\TicTacToe.pdb
-C:\Users\ASUNCION\source\repos\TicTacToe\TicTacToe\obj\Debug\TicTacToe.TicTacToe.resources
+C:\Users\ASUNCION\source\repos\TicTacToe\TicTacToe\obj\Debug\TicTacToe.Form1.resources

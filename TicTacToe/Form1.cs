@@ -10,9 +10,12 @@ using System.Windows.Forms;
 
 namespace TicTacToe
 {
-    public partial class TicTacToe : Form
+    public partial class Form1 : Form
     {
-        public TicTacToe()
+
+        int turnCounts = 0;
+
+        public Form1()
         {
             InitializeComponent();
         }
@@ -20,6 +23,19 @@ namespace TicTacToe
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnClick(object sender, EventArgs e)
+        {
+            Button x = (Button)sender;
+            if (true)
+            {
+                x.Text = "X";
+            }
+            else
+            {
+                x.Text = "O";
+            }
         }
     }
 }
