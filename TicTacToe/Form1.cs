@@ -152,6 +152,9 @@ namespace TicTacToe
             if (turnCounts == 9)
             {
                 MessageBox.Show("Draw");
+                Form1 newForm = new Form1();
+                newForm.Show();
+                this.Dispose(false);
             }
 
             if (isWinner)
