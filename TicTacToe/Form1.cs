@@ -43,10 +43,11 @@ namespace TicTacToe
             getWinner();
         }
 
-
         private void getWinner()
         {
             bool isWinner = false;
+
+            //FOR X COMBINATIONS
 
             if (btnTopLeft.Text == "X")
             {
@@ -62,6 +63,7 @@ namespace TicTacToe
                 {
                     isWinner = true;
                 }
+
             }
             if (btnTopMid.Text == "X")
             {
@@ -96,6 +98,62 @@ namespace TicTacToe
                 }
             }
 
+            // FOR O COMBINATIONS
+
+            if (btnTopLeft.Text == "O")
+            {
+                if (btnTopMid.Text == "O" && btnTopRight.Text == "O")
+                {
+                    isWinner = true;
+                }
+                else if (btnMidMid.Text == "O" && btnBotRight.Text == "O")
+                {
+                    isWinner = true;
+                }
+                else if (btnMidLeft.Text == "O" && btnBotLeft.Text == "O")
+                {
+                    isWinner = true;
+                }
+            }
+            if (btnTopMid.Text == "O")
+            {
+                if (btnMidMid.Text == "O" && btnBotMid.Text == "O")
+                {
+                    isWinner = true;
+                }
+            }
+            if (btnTopRight.Text == "O")
+            {
+                if (btnMidMid.Text == "O" && btnBotLeft.Text == "O")
+                {
+                    isWinner = true;
+                }
+                else if (btnMidRight.Text == "O" && btnBotRight.Text == "O")
+                {
+                    isWinner = true;
+                }
+            }
+            if (btnMidLeft.Text == "O")
+            {
+                if (btnMidMid.Text == "O" && btnMidRight.Text == "O")
+                {
+                    isWinner = true;
+                }
+            }
+            if (btnBotLeft.Text == "O")
+            {
+                if (btnBotMid.Text == "O" && btnBotRight.Text == "O")
+                {
+                    isWinner = true;
+                }
+            }
+
+            turnCounts += 1;
+            if (turnCounts == 9)
+            {
+                MessageBox.Show("Draw");
+            }
+
             if (isWinner)
             {
                 if (turn)
@@ -106,7 +164,7 @@ namespace TicTacToe
                 {
                     MessageBox.Show("X wins!");
                 }
-               
+            
             }
         }
 
