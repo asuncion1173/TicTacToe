@@ -54,6 +54,14 @@ namespace TicTacToe
                 {
                     isWinner = true;
                 }
+                else if (btnMidMid.Text == "X" && btnBotRight.Text == "X")
+                {
+                    isWinner = true;
+                }
+                else if (btnMidLeft.Text == "X" && btnBotLeft.Text == "X")
+                {
+                    isWinner = true;
+                }
             }
 
             //if ((btntopleft.text == btntopmid.text) && (btntopmid.text == btntopright.text) && (!btntopleft.enabled))
