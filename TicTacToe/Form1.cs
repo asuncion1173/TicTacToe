@@ -39,8 +39,52 @@ namespace TicTacToe
 
             x.Click -= this.btnClick;
             turn = !turn;
+
+            getWinner();
         }
 
+
+        private void getWinner()
+        {
+            bool isWinner = false;
+
+            if (btnTopLeft.Text == "X")
+            {
+                if (btnTopMid.Text == "X" && btnTopRight.Text == "X")
+                {
+                    isWinner = true;
+                }
+            }
+
+            //if ((btntopleft.text == btntopmid.text) && (btntopmid.text == btntopright.text) && (!btntopleft.enabled))
+            //{
+            //    iswinner = true;
+            //}
+            //else if ((btnmidleft.text == btnmidmid.text) && (btnmidmid.text == btnmidright.text) && (!btnmidleft.enabled))
+            //{
+            //    iswinner = true;
+            //}
+            //else if ((btnbotleft.text == btnbotmid.text) && (btnbotmid.text == btnbotright.text) && (!btnbotleft.enabled))
+            //{
+            //    iswinner = true;
+            //}
+
+
+            if (isWinner)
+            {
+                if (turn)
+                {
+                    MessageBox.Show("O wins!");
+                }
+                else
+                {
+                    MessageBox.Show("X wins!");
+                }
+               
+            }
+        }
+
+        
         private void btnReset_Click(object sender, EventArgs e)
         {
             Form1 newForm = new Form1();
