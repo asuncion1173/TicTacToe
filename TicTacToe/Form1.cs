@@ -166,7 +166,7 @@ namespace TicTacToe
                         MessageBox.Show("O wins!");
                         clearBoard();
                     }
-                    else
+                    else if (turn == false)
                     {
                         MessageBox.Show("X wins!");
                         clearBoard();
@@ -182,7 +182,13 @@ namespace TicTacToe
                     clearBoard();
                 }
             }
-  
+
+            if (turnCounts == 9)
+            {
+                MessageBox.Show("Draw");
+                clearBoard();
+            }
+
         }
 
         
