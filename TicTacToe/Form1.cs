@@ -64,6 +64,7 @@ namespace TicTacToe
 
             playerScore1.Text = player1Score.ToString();
             playerScore2.Text = player2Score.ToString();
+            playerTurn.Text = "Taph's Turn (X)";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -76,11 +77,13 @@ namespace TicTacToe
             Button x = (Button)sender;
             if (turn)
             {
+                playerTurn.Text = "Pipes's Turn (O)";
                 x.Text = "X";
                 countX += 1;
             }
             else
             {
+                playerTurn.Text = "Taph's Turn (X)";
                 x.Text = "O";
             }
             x.Enabled = false;
@@ -209,7 +212,7 @@ namespace TicTacToe
             }
             else if ((btnTopRight.Text == btnMidMid.Text) && (btnMidMid.Text == btnBotLeft.Text) && (!btnTopRight.Enabled))
             {
-                if (btnTopMid.Text == "X")
+                if (btnTopRight.Text == "X")
                 {
                     MessageBox.Show("Taph wins!");
                     player1Score++;
@@ -225,6 +228,7 @@ namespace TicTacToe
             if (countX == 5)
             {
                 MessageBox.Show("Taph and Pipe Draw");
+                clearBoard();
             }
 
         }
@@ -233,7 +237,8 @@ namespace TicTacToe
         private void btnReset_Click(object sender, EventArgs e)
         {
             clearBoard();
+            player1Score = 0;
+            player2Score = 0;
         }
-
     }
 }
