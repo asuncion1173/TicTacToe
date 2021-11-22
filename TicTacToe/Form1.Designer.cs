@@ -51,10 +51,12 @@ namespace TicTacToe
             // btnTopLeft
             // 
             this.btnTopLeft.BackColor = System.Drawing.SystemColors.ControlText;
+            this.btnTopLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTopLeft.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnTopLeft.Location = new System.Drawing.Point(62, 121);
+            this.btnTopLeft.Location = new System.Drawing.Point(165, 141);
+            this.btnTopLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTopLeft.Name = "btnTopLeft";
-            this.btnTopLeft.Size = new System.Drawing.Size(83, 78);
+            this.btnTopLeft.Size = new System.Drawing.Size(97, 90);
             this.btnTopLeft.TabIndex = 0;
             this.btnTopLeft.TabStop = false;
             this.btnTopLeft.UseVisualStyleBackColor = false;
@@ -63,9 +65,11 @@ namespace TicTacToe
             // btnTopMid
             // 
             this.btnTopMid.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnTopMid.Location = new System.Drawing.Point(163, 121);
+            this.btnTopMid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTopMid.Location = new System.Drawing.Point(284, 141);
+            this.btnTopMid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTopMid.Name = "btnTopMid";
-            this.btnTopMid.Size = new System.Drawing.Size(83, 78);
+            this.btnTopMid.Size = new System.Drawing.Size(97, 90);
             this.btnTopMid.TabIndex = 1;
             this.btnTopMid.TabStop = false;
             this.btnTopMid.UseVisualStyleBackColor = false;
@@ -74,9 +78,11 @@ namespace TicTacToe
             // btnTopRight
             // 
             this.btnTopRight.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnTopRight.Location = new System.Drawing.Point(263, 121);
+            this.btnTopRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTopRight.Location = new System.Drawing.Point(400, 141);
+            this.btnTopRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTopRight.Name = "btnTopRight";
-            this.btnTopRight.Size = new System.Drawing.Size(83, 78);
+            this.btnTopRight.Size = new System.Drawing.Size(97, 90);
             this.btnTopRight.TabIndex = 3;
             this.btnTopRight.TabStop = false;
             this.btnTopRight.UseVisualStyleBackColor = false;
@@ -84,9 +90,10 @@ namespace TicTacToe
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(425, 271);
+            this.btnReset.Location = new System.Drawing.Point(536, 418);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(85, 76);
+            this.btnReset.Size = new System.Drawing.Size(99, 32);
             this.btnReset.TabIndex = 2;
             this.btnReset.TabStop = false;
             this.btnReset.Text = "Reset";
@@ -96,9 +103,11 @@ namespace TicTacToe
             // btnMidRight
             // 
             this.btnMidRight.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMidRight.Location = new System.Drawing.Point(263, 212);
+            this.btnMidRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMidRight.Location = new System.Drawing.Point(400, 246);
+            this.btnMidRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMidRight.Name = "btnMidRight";
-            this.btnMidRight.Size = new System.Drawing.Size(83, 78);
+            this.btnMidRight.Size = new System.Drawing.Size(97, 90);
             this.btnMidRight.TabIndex = 6;
             this.btnMidRight.TabStop = false;
             this.btnMidRight.UseVisualStyleBackColor = false;
@@ -107,9 +116,11 @@ namespace TicTacToe
             // btnMidMid
             // 
             this.btnMidMid.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMidMid.Location = new System.Drawing.Point(163, 212);
+            this.btnMidMid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMidMid.Location = new System.Drawing.Point(284, 246);
+            this.btnMidMid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMidMid.Name = "btnMidMid";
-            this.btnMidMid.Size = new System.Drawing.Size(83, 78);
+            this.btnMidMid.Size = new System.Drawing.Size(97, 90);
             this.btnMidMid.TabIndex = 5;
             this.btnMidMid.TabStop = false;
             this.btnMidMid.UseVisualStyleBackColor = false;
@@ -118,9 +129,11 @@ namespace TicTacToe
             // btnMidLeft
             // 
             this.btnMidLeft.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMidLeft.Location = new System.Drawing.Point(62, 212);
+            this.btnMidLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMidLeft.Location = new System.Drawing.Point(165, 246);
+            this.btnMidLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMidLeft.Name = "btnMidLeft";
-            this.btnMidLeft.Size = new System.Drawing.Size(83, 78);
+            this.btnMidLeft.Size = new System.Drawing.Size(97, 90);
             this.btnMidLeft.TabIndex = 4;
             this.btnMidLeft.TabStop = false;
             this.btnMidLeft.UseVisualStyleBackColor = false;
@@ -129,9 +142,11 @@ namespace TicTacToe
             // btnBotRight
             // 
             this.btnBotRight.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnBotRight.Location = new System.Drawing.Point(263, 305);
+            this.btnBotRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBotRight.Location = new System.Drawing.Point(400, 353);
+            this.btnBotRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBotRight.Name = "btnBotRight";
-            this.btnBotRight.Size = new System.Drawing.Size(83, 78);
+            this.btnBotRight.Size = new System.Drawing.Size(97, 90);
             this.btnBotRight.TabIndex = 9;
             this.btnBotRight.TabStop = false;
             this.btnBotRight.UseVisualStyleBackColor = false;
@@ -140,9 +155,11 @@ namespace TicTacToe
             // btnBotMid
             // 
             this.btnBotMid.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnBotMid.Location = new System.Drawing.Point(163, 305);
+            this.btnBotMid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBotMid.Location = new System.Drawing.Point(284, 353);
+            this.btnBotMid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBotMid.Name = "btnBotMid";
-            this.btnBotMid.Size = new System.Drawing.Size(83, 78);
+            this.btnBotMid.Size = new System.Drawing.Size(97, 90);
             this.btnBotMid.TabIndex = 8;
             this.btnBotMid.TabStop = false;
             this.btnBotMid.UseVisualStyleBackColor = false;
@@ -151,9 +168,11 @@ namespace TicTacToe
             // btnBotLeft
             // 
             this.btnBotLeft.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnBotLeft.Location = new System.Drawing.Point(62, 305);
+            this.btnBotLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBotLeft.Location = new System.Drawing.Point(165, 353);
+            this.btnBotLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBotLeft.Name = "btnBotLeft";
-            this.btnBotLeft.Size = new System.Drawing.Size(83, 78);
+            this.btnBotLeft.Size = new System.Drawing.Size(97, 90);
             this.btnBotLeft.TabIndex = 7;
             this.btnBotLeft.TabStop = false;
             this.btnBotLeft.UseVisualStyleBackColor = false;
@@ -162,27 +181,32 @@ namespace TicTacToe
             // playerScore1
             // 
             this.playerScore1.AutoSize = true;
-            this.playerScore1.Location = new System.Drawing.Point(132, 80);
+            this.playerScore1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerScore1.Location = new System.Drawing.Point(168, 99);
+            this.playerScore1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.playerScore1.Name = "playerScore1";
-            this.playerScore1.Size = new System.Drawing.Size(13, 13);
+            this.playerScore1.Size = new System.Drawing.Size(18, 20);
             this.playerScore1.TabIndex = 10;
             this.playerScore1.Text = "0";
             // 
             // playerScore2
             // 
             this.playerScore2.AutoSize = true;
-            this.playerScore2.Location = new System.Drawing.Point(412, 80);
+            this.playerScore2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerScore2.Location = new System.Drawing.Point(470, 99);
+            this.playerScore2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.playerScore2.Name = "playerScore2";
-            this.playerScore2.Size = new System.Drawing.Size(13, 13);
+            this.playerScore2.Size = new System.Drawing.Size(18, 20);
             this.playerScore2.TabIndex = 11;
             this.playerScore2.Text = "0";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(37, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(21, 14);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(79, 72);
+            this.pictureBox1.Size = new System.Drawing.Size(126, 109);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
@@ -190,18 +214,21 @@ namespace TicTacToe
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(431, 21);
+            this.pictureBox2.Location = new System.Drawing.Point(508, 14);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(79, 72);
+            this.pictureBox2.Size = new System.Drawing.Size(126, 109);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(556, 402);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(648, 464);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.playerScore2);
@@ -217,7 +244,9 @@ namespace TicTacToe
             this.Controls.Add(this.btnTopMid);
             this.Controls.Add(this.btnTopLeft);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.ShowIcon = false;

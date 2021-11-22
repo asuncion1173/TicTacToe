@@ -17,9 +17,14 @@ namespace TicTacToe
         int player1Score = 0;
         int player2Score = 0;
 
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+
         public Form1()
         {
             InitializeComponent();
+
+            player.SoundLocation = "backgroundMix.wav";
+            player.Play();
         }
 
         public void clearBoard()
@@ -78,11 +83,11 @@ namespace TicTacToe
             {
                 x.Text = "O";
             }
-
             x.Enabled = false;
             turn = !turn;
             x.BackColor = System.Drawing.Color.White;
             x.ForeColor = System.Drawing.Color.Black;
+            
 
 
             getWinner();
@@ -100,12 +105,12 @@ namespace TicTacToe
              
                 if (btnTopLeft.Text == "X")
                 {
-                    MessageBox.Show("X wins!");
+                    MessageBox.Show("Taph wins!");
                     player1Score ++;
                 }
                 else
                 {
-                    MessageBox.Show("O wins!");
+                    MessageBox.Show("Pipe wins!");
                     player2Score ++;
                 }
                 clearBoard();
@@ -114,12 +119,12 @@ namespace TicTacToe
             {
                 if (btnMidLeft.Text == "X")
                 {
-                    MessageBox.Show("X wins!");
+                    MessageBox.Show("Taph wins!");
                     player1Score++;
                 }
                 else
                 {
-                    MessageBox.Show("O wins!");
+                    MessageBox.Show("Pipe wins!");
                     player2Score++;
                 }
                 clearBoard();
@@ -128,12 +133,12 @@ namespace TicTacToe
             {
                 if (btnBotLeft.Text == "X")
                 {
-                    MessageBox.Show("X wins!");
+                    MessageBox.Show("Taph wins!");
                     player1Score++;
                 }
                 else
                 {
-                    MessageBox.Show("O wins!");
+                    MessageBox.Show("Pipe wins!");
                     player2Score++;
                 }
                 clearBoard();
@@ -146,12 +151,12 @@ namespace TicTacToe
 
                 if (btnTopLeft.Text == "X")
                 {
-                    MessageBox.Show("X wins!");
+                    MessageBox.Show("Taph wins!");
                     player1Score++;
                 }
                 else
                 {
-                    MessageBox.Show("O wins!");
+                    MessageBox.Show("Pipe wins!");
                     player2Score++;
                 }
                 clearBoard();
@@ -160,12 +165,12 @@ namespace TicTacToe
             {
                 if (btnTopMid.Text == "X")
                 {
-                    MessageBox.Show("X wins!");
+                    MessageBox.Show("Taph wins!");
                     player1Score++;
                 }
                 else
                 {
-                    MessageBox.Show("O wins!");
+                    MessageBox.Show("Pipe wins!");
                     player2Score++;
                 }
                 clearBoard();
@@ -174,12 +179,12 @@ namespace TicTacToe
             {
                 if (btnTopRight.Text == "X")
                 {
-                    MessageBox.Show("X wins!");
+                    MessageBox.Show("Taph wins!");
                     player1Score++;
                 }
                 else
                 {
-                    MessageBox.Show("O wins!");
+                    MessageBox.Show("Pipe wins!");
                     player2Score++;
                 }
                 clearBoard();
@@ -192,12 +197,12 @@ namespace TicTacToe
 
                 if (btnTopLeft.Text == "X")
                 {
-                    MessageBox.Show("X wins!");
+                    MessageBox.Show("Taph wins!");
                     player1Score++;
                 }
                 else
                 {
-                    MessageBox.Show("O wins!");
+                    MessageBox.Show("Pipe wins!");
                     player2Score++;
                 }
                 clearBoard();
@@ -206,15 +211,20 @@ namespace TicTacToe
             {
                 if (btnTopMid.Text == "X")
                 {
-                    MessageBox.Show("X wins!");
+                    MessageBox.Show("Taph wins!");
                     player1Score++;
                 }
                 else
                 {
-                    MessageBox.Show("O wins!");
+                    MessageBox.Show("Pipe wins!");
                     player2Score++;
                 }
                 clearBoard();
+            }
+
+            if (countX == 5)
+            {
+                MessageBox.Show("Taph and Pipe Draw");
             }
 
         }
