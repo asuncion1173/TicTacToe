@@ -47,6 +47,7 @@ namespace TicTacToe
             this.playerTurn = new System.Windows.Forms.Label();
             this.labelTaph = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnMute = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -93,6 +94,7 @@ namespace TicTacToe
             // 
             // btnReset
             // 
+            this.btnReset.BackColor = System.Drawing.Color.Gray;
             this.btnReset.Location = new System.Drawing.Point(536, 418);
             this.btnReset.Margin = new System.Windows.Forms.Padding(4);
             this.btnReset.Name = "btnReset";
@@ -100,7 +102,7 @@ namespace TicTacToe
             this.btnReset.TabIndex = 2;
             this.btnReset.TabStop = false;
             this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnMidRight
@@ -260,6 +262,19 @@ namespace TicTacToe
             this.label1.TabIndex = 16;
             this.label1.Text = "Pipe";
             // 
+            // btnMute
+            // 
+            this.btnMute.BackColor = System.Drawing.Color.Gray;
+            this.btnMute.ForeColor = System.Drawing.Color.Black;
+            this.btnMute.Location = new System.Drawing.Point(12, 418);
+            this.btnMute.Name = "btnMute";
+            this.btnMute.Size = new System.Drawing.Size(43, 34);
+            this.btnMute.TabIndex = 17;
+            this.btnMute.TabStop = false;
+            this.btnMute.Text = "Mute";
+            this.btnMute.UseVisualStyleBackColor = false;
+            this.btnMute.Click += new System.EventHandler(this.btnMute_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -267,6 +282,7 @@ namespace TicTacToe
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(648, 464);
+            this.Controls.Add(this.btnMute);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelTaph);
             this.Controls.Add(this.playerTurn);
@@ -287,10 +303,10 @@ namespace TicTacToe
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TicTacToe";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -320,6 +336,7 @@ namespace TicTacToe
         private System.Windows.Forms.Label playerTurn;
         private System.Windows.Forms.Label labelTaph;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnMute;
     }
 }
 

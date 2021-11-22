@@ -236,9 +236,14 @@ namespace TicTacToe
         
         private void btnReset_Click(object sender, EventArgs e)
         {
-            clearBoard();
             player1Score = 0;
             player2Score = 0;
+            clearBoard();
+        }
+
+        private void btnMute_Click(object sender, EventArgs e)
+        {
+            player.Stop();
         }
     }
 }
