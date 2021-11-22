@@ -12,8 +12,10 @@ namespace TicTacToe
 {
     public partial class Form1 : Form
     {
-        int turnCounts = 0;
+        int countX = 0;
         bool turn = true;
+        int player1Score = 0;
+        int player2Score = 0;
 
         public Form1()
         {
@@ -22,9 +24,41 @@ namespace TicTacToe
 
         public void clearBoard()
         {
-            Form1 newForm = new Form1();
-            newForm.Show();
-            this.Dispose(false);
+            btnTopLeft.Enabled = true;
+            btnTopMid.Enabled = true;
+            btnTopRight.Enabled = true;
+            btnMidLeft.Enabled = true;
+            btnMidMid.Enabled = true;
+            btnMidRight.Enabled = true;
+            btnBotLeft.Enabled = true;
+            btnBotMid.Enabled = true;
+            btnBotRight.Enabled = true;
+
+            btnTopLeft.Text = "";
+            btnTopMid.Text = "";
+            btnTopRight.Text = "";
+            btnMidLeft.Text = "";
+            btnMidMid.Text = "";
+            btnMidRight.Text = "";
+            btnBotLeft.Text = "";
+            btnBotMid.Text = "";
+            btnBotRight.Text = "";
+
+            btnTopLeft.BackColor = System.Drawing.Color.Black;
+            btnTopMid.BackColor = System.Drawing.Color.Black;
+            btnTopRight.BackColor = System.Drawing.Color.Black;
+            btnMidLeft.BackColor = System.Drawing.Color.Black;
+            btnMidMid.BackColor = System.Drawing.Color.Black;
+            btnMidRight.BackColor = System.Drawing.Color.Black;
+            btnBotLeft.BackColor = System.Drawing.Color.Black;
+            btnBotMid.BackColor = System.Drawing.Color.Black;
+            btnBotRight.BackColor = System.Drawing.Color.Black;
+
+            countX = 0;
+            turn = true;
+
+            playerScore1.Text = player1Score.ToString();
+            playerScore2.Text = player2Score.ToString();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -38,154 +72,148 @@ namespace TicTacToe
             if (turn)
             {
                 x.Text = "X";
+                countX += 1;
             }
             else
             {
                 x.Text = "O";
             }
 
-            x.Click -= this.btnClick;
+            x.Enabled = false;
             turn = !turn;
+            x.BackColor = System.Drawing.Color.White;
+            x.ForeColor = System.Drawing.Color.Black;
+
 
             getWinner();
+
+            
         }
 
         private void getWinner()
         {
-            bool isWinner = false;
 
-            //FOR X COMBINATIONS
+            // For Horizontal combination
 
-            if (btnTopLeft.Text == "X")
+            if ((btnTopLeft.Text == btnTopMid.Text) && (btnTopMid.Text == btnTopRight.Text) && (!btnTopLeft.Enabled))
             {
-                if (btnTopMid.Text == "X" && btnTopRight.Text == "X")
+             
+                if (btnTopLeft.Text == "X")
                 {
-                    isWinner = true;
+                    MessageBox.Show("X wins!");
+                    player1Score ++;
                 }
-                else if (btnMidMid.Text == "X" && btnBotRight.Text == "X")
+                else
                 {
-                    isWinner = true;
+                    MessageBox.Show("O wins!");
+                    player2Score ++;
                 }
-                else if (btnMidLeft.Text == "X" && btnBotLeft.Text == "X")
-                {
-                    isWinner = true;
-                }
+                clearBoard();
             }
-
-            if (btnTopMid.Text == "X")
+            else if ((btnMidLeft.Text == btnMidMid.Text) && (btnMidMid.Text == btnMidRight.Text) && (!btnMidLeft.Enabled))
             {
-                if (btnMidMid.Text == "X" && btnBotMid.Text == "X")
+                if (btnMidLeft.Text == "X")
                 {
-                    isWinner = true;
+                    MessageBox.Show("X wins!");
+                    player1Score++;
                 }
+                else
+                {
+                    MessageBox.Show("O wins!");
+                    player2Score++;
+                }
+                clearBoard();
             }
-            if (btnTopRight.Text == "X")
+            else if ((btnBotLeft.Text == btnBotMid.Text) && (btnBotMid.Text == btnBotRight.Text) && (!btnBotLeft.Enabled))
             {
-                if (btnMidMid.Text == "X" && btnBotLeft.Text == "X")
+                if (btnBotLeft.Text == "X")
                 {
-                    isWinner = true;
+                    MessageBox.Show("X wins!");
+                    player1Score++;
                 }
-                else if (btnMidRight.Text == "X" && btnBotRight.Text == "X")
+                else
                 {
-                    isWinner = true;
+                    MessageBox.Show("O wins!");
+                    player2Score++;
                 }
-            }
-            if (btnMidLeft.Text == "X")
-            {
-                if (btnMidMid.Text == "X" && btnMidRight.Text == "X")
-                {
-                    isWinner = true;
-                }
-            }
-            if (btnBotLeft.Text == "X")
-            {
-                if (btnBotMid.Text == "X" && btnBotRight.Text == "X")
-                {
-                    isWinner = true;
-                }
+                clearBoard();
             }
 
-            // FOR O COMBINATIONS
+            // Vertical
 
-            if (btnTopLeft.Text == "O")
+            if ((btnTopLeft.Text == btnMidLeft.Text) && (btnMidLeft.Text == btnBotLeft.Text) && (!btnTopLeft.Enabled))
             {
-                if (btnTopMid.Text == "O" && btnTopRight.Text == "O")
+
+                if (btnTopLeft.Text == "X")
                 {
-                    isWinner = true;
+                    MessageBox.Show("X wins!");
+                    player1Score++;
                 }
-                else if (btnMidMid.Text == "O" && btnBotRight.Text == "O")
+                else
                 {
-                    isWinner = true;
+                    MessageBox.Show("O wins!");
+                    player2Score++;
                 }
-                else if (btnMidLeft.Text == "O" && btnBotLeft.Text == "O")
-                {
-                    isWinner = true;
-                }
+                clearBoard();
             }
-            if (btnTopMid.Text == "O")
+            else if ((btnTopMid.Text == btnMidMid.Text) && (btnMidMid.Text == btnBotMid.Text) && (!btnTopMid.Enabled))
             {
-                if (btnMidMid.Text == "O" && btnBotMid.Text == "O")
+                if (btnTopMid.Text == "X")
                 {
-                    isWinner = true;
+                    MessageBox.Show("X wins!");
+                    player1Score++;
                 }
+                else
+                {
+                    MessageBox.Show("O wins!");
+                    player2Score++;
+                }
+                clearBoard();
             }
-            if (btnTopRight.Text == "O")
+            else if ((btnTopRight.Text == btnMidRight.Text) && (btnMidRight.Text == btnBotRight.Text) && (!btnTopRight.Enabled))
             {
-                if (btnMidMid.Text == "O" && btnBotLeft.Text == "O")
+                if (btnTopRight.Text == "X")
                 {
-                    isWinner = true;
+                    MessageBox.Show("X wins!");
+                    player1Score++;
                 }
-                else if (btnMidRight.Text == "O" && btnBotRight.Text == "O")
+                else
                 {
-                    isWinner = true;
+                    MessageBox.Show("O wins!");
+                    player2Score++;
                 }
-            }
-            if (btnMidLeft.Text == "O")
-            {
-                if (btnMidMid.Text == "O" && btnMidRight.Text == "O")
-                {
-                    isWinner = true;
-                }
-            }
-            if (btnBotLeft.Text == "O")
-            {
-                if (btnBotMid.Text == "O" && btnBotRight.Text == "O")
-                {
-                    isWinner = true;
-                }
+                clearBoard();
             }
 
-            turnCounts += 1;
+            // Diagonal
 
-            try
+            if ((btnTopLeft.Text == btnMidMid.Text) && (btnMidMid.Text == btnBotRight.Text) && (!btnTopLeft.Enabled))
             {
-                if (isWinner)
+
+                if (btnTopLeft.Text == "X")
                 {
-                    if (turn)
-                    {
-                        MessageBox.Show("O wins!");
-                        clearBoard();
-                    }
-                    else if (turn == false)
-                    {
-                        MessageBox.Show("X wins!");
-                        clearBoard();
-                    }
-
+                    MessageBox.Show("X wins!");
+                    player1Score++;
                 }
-            }
-            catch
-            {
-                if (turnCounts == 9)
+                else
                 {
-                    MessageBox.Show("Draw");
-                    clearBoard();
+                    MessageBox.Show("O wins!");
+                    player2Score++;
                 }
+                clearBoard();
             }
-
-            if (turnCounts == 9)
+            else if ((btnTopRight.Text == btnMidMid.Text) && (btnMidMid.Text == btnBotLeft.Text) && (!btnTopRight.Enabled))
             {
-                MessageBox.Show("Draw");
+                if (btnTopMid.Text == "X")
+                {
+                    MessageBox.Show("X wins!");
+                    player1Score++;
+                }
+                else
+                {
+                    MessageBox.Show("O wins!");
+                    player2Score++;
+                }
                 clearBoard();
             }
 
@@ -196,5 +224,6 @@ namespace TicTacToe
         {
             clearBoard();
         }
+
     }
 }
